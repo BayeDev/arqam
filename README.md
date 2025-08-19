@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Arqam Budget Insights
+
+An AI-powered budget analysis chatbot that helps you interact with and gain insights from your budget data over the last five years.
+
+## Features
+
+- 📊 **Excel File Upload**: Upload and parse Excel files (.xlsx, .xls) containing budget data
+- 🤖 **AI Chatbot**: Interactive chat interface for asking questions about your budget data
+- 📈 **Data Visualization**: Charts, graphs, and tables showing budget trends and insights
+- 💡 **Smart Analysis**: Get insights about:
+  - Yearly budget submission trends
+  - Budget plan performance and missed targets
+  - GL entry discrepancies and variances
+  - Budget performance by category
+  - Average spending patterns
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/BayeDev/arqam.git
+cd arqam
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Start the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+## Usage
 
-To learn more about Next.js, take a look at the following resources:
+### 1. Upload Budget Data
+- Navigate to the "Upload Data" tab
+- Drag and drop or select an Excel file containing your budget data
+- The application expects columns like: Year, Budget, Actual, Category, etc.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 2. Chat Analysis
+- Once data is uploaded, navigate to "Chat Analysis"
+- Ask questions in natural language about your budget data
+- Example questions:
+  - "What was the trend for our yearly budget submissions?"
+  - "How many years did we miss the budget plan?"
+  - "Do you see any discrepancies in GL entries?"
+  - "Show me the worst performing budget categories"
+  - "What's our average budget variance?"
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 3. Visualizations
+- View automatic charts and graphs of your budget data
+- See key metrics like total records, average variance, and performance indicators
+- Browse data tables with your uploaded information
 
-## Deploy on Vercel
+## Expected Data Format
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Your Excel file should include columns such as:
+- **Year**: The budget year (e.g., 2020, 2021, etc.)
+- **Budget**: Planned budget amount
+- **Actual**: Actual spending amount
+- **Category**: Budget category or description
+- **GL_Account** (optional): General Ledger account codes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Technologies Used
+
+- **Next.js 15**: React framework with App Router
+- **TypeScript**: Type-safe development
+- **Tailwind CSS**: Utility-first CSS framework
+- **Chart.js & React-Chartjs-2**: Data visualization
+- **XLSX**: Excel file parsing
+- **Lucide React**: Modern icon library
+
+## Commands
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License.
+
+## Support
+
+For support, please open an issue on the [GitHub repository](https://github.com/BayeDev/arqam/issues).
